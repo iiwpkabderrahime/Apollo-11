@@ -1,0 +1,36 @@
+@media (max-width:1200px){
+    .ovr{
+        flex-direction: column;
+    }
+    .cr-intro{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom:1rem;
+    }
+    .ovr-content >p{
+        border-left:2px solid #434652;
+        padding:0px 10px;
+    }
+    .images{
+        display: grid;
+        grid-template-areas:
+        "neil neil"
+        "buzz mich";
+        gap:4rem;
+    }
+    .neil{
+        grid-area: neil;
+        justify-self: center;
+    }
+    #Landing{
+        flex-direction: column-reverse;
+    }
+    #Impact .imct-cnt{
+        flex-direction: column-reverse;
+    }
+    #Timeline >div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}

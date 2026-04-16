@@ -1,0 +1,117 @@
+@media (max-width:699px){
+    *{
+        margin:0px;
+    }
+    header nav ul{
+        display:none;
+
+    }
+    .intro{
+        text-align: center;
+        padding:1rem;
+    }
+    .intro h1{
+        font-size: 3rem;
+    }
+    .ovr{
+
+     display: grid;
+     padding:1rem;
+     align-items:center;
+     justify-content: center;
+    }
+    .ovr-statics {
+        flex-direction: column;
+        align-items:start ;
+        
+    }
+    .ovr img{
+
+        min-width: 200x;
+        width:100%;
+
+    }
+    .images {
+        padding:1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .neil{
+        order:0;
+        transform: scale(1);
+    }
+    .buzz{
+        order:1;
+    }
+    .Michael{
+        order:2;
+    }
+    #Landing{
+        padding:1rem;
+    }
+    #Landing article h2 {
+        font-size: 2rem;
+    }
+    #Landing article p{
+        font-size: 1rem;
+        line-height: 1.4;
+
+    }
+    #Landing article p img{
+        width:200px;
+    }
+    #Landing .lnd-img {
+        padding:0rem;
+        background-image: none;
+        border:none;
+    }
+    #Landing .lnd-img p{
+        position: static;
+    }
+    #Impact{
+        background: linear-gradient(to right, #131313 50%, var(--black));
+        padding:2rem 1rem;
+    }
+    #Impact .imct-cnt {
+  background:none;
+  border:none;
+  padding: 0rem;
+}
+
+    #Impact .imct-cnt img {
+  order: 0;
+  width: 200px;
+
+   }
+    .imct-cnt article {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+     }
+     .imct-cnt article h2 {
+  font-size: 2rem;
+     }
+     .imct-cnt article p {
+  width: 90%;
+  color: #e2e2ebcb;
+     }
+         #Timeline >div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer div h2{
+        font-size:1rem;
+    }
+     footer {
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+     }
+      footer li{
+        
+      }
+    
+
+}
