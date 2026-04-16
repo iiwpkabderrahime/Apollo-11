@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*,
+*::after,
+*::before {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+@keyframes flip{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes slid-in {
+    0%{
+        transform: translateX(-100vw);
+        filter: opacity(0);
+    }
+    50%{
+        filter: opacity(0.4);
+    }
+    100%{
+        transform: translateX(0);
+        filter: opacity(1);
+    }
+}
+@keyframes scrol {
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes slid-up{
+    0%{
+        transform: translateY(400px);
+        filter: opacity(0);
+    }
+    50%{
+        filter: opacity(0.4);
+    }
+    100%{
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+}
+
+img{
+    width:100px;
+}
+:root{
+    --primary:#FFFFFF;
+    --secondarey:#0B3D91;
+    --gray:#a1a1a113;
+    --gray-hover:#a1a1a13d;
+    --black:#080808;
+    --black2:#131313;
+    --border-color:#434652;
+    --Light-Blue: #7a98f1;
+    --white-hd:#E5E2E1 ;
+
+}
+body{
+    font-family: "Inter","sans-serif";
+    background-color: var(--black2);
+    display: flex;
+    flex-direction: column;
+    
+}
+h1,h2,h3,h4{
+    font-family:"Space Grotesk","sans-serif";
+}
+header{
+    position: sticky;
+    z-index: 10;
+    top:0;
+    width:100%;
+}
+header h2{
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding:1.2rem;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.493);
+    backdrop-filter: blur(10px);
+
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap:1rem;
+}
+nav a{
+    color:var(--primary);
+    text-decoration: none;
+    
+    
+}
+nav h2{
+    color:var(--primary);
+}
+nav h2 a:hover{
+    color:var(--Light-Blue);
+}
+ul a{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+ul a:hover{
+    transition: all 0.15s 0.24s ease;
+    color:var(--Light-Blue);
+    text-decoration:2.3px underline;
+    text-underline-offset: 8px;
+
+    
+}
+
+.btn{
+    background:linear-gradient(to bottom right ,var(--white-hd) 1%, var(--Light-Blue),var(--secondarey) ,var(--secondarey));
+    padding:0.4rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    color:black;
+    text-decoration: none;
+}
+.btn:hover{
+    transition:transform 1.2s 0.13s ease;
+    transform: translateY(3px);
+
+
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    padding:0px;
+
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    height:100vh;
+    background-image:url(./Images/Apollo11-Rocket-Background-PC.jpg);
+    background-size: cover;
+}
+.intro h1{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+
+}
+.intro p:has(time){
+    color:var(--Light-Blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.scrl{
+    animation:scrol 0.5s ease-in-out infinite alternate;
+    background-color: white;
+    padding:0.7rem 2rem;
+    border-radius: 10px;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+section > article{
+    padding:3rem 2rem;
+}
+
+.ovr{
+    color:white;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    animation:slid-in 1.4s ease-in-out;
+    animation-timeline: view();
+    animation-range:entry;
+    padding-right: 2rem;
+    padding-top: 2rem;;
+
+
+}
+
+.ovr p{
+    line-height: 1.6;
+}
+.ovr-content{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+
+    
+}
+
+.ovr img{
+    width:70%;
+    filter:grayscale();
+    border:2px solid var(--border-color);
+}
+.ovr-statics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+   
+}
+.ovr-statics div{
+
+     border-left:2px solid var(--border-color);
+     padding:10px;
+}
+.ovr-statics div h3{
+    color:var(--Light-Blue);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+
+}
+.ovr-statics div p{
+    font-weight: 800;
+}
+.ovr-content h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.ovr-content p{
+    font-size: 1.2rem;
+}
+#Crew{
+    background-color: var(--black);
+    animation:slid-up 1.4s ease-in-out;
+    animation-timeline: view();
+    animation-range:entry;
+    color:var(--primary);
+    display:flex;
+    flex-direction: column;
+
+}
+.cr-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+
+}
+.cr-intro h2{
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+.cr-intro p{
+    font-size: 1.1rem;
+    
+    
+}
+.cr-blue{
+    color:var(--Light-Blue);
+}
+.images{
+    display:flex; 
+    gap:1rem;
+    justify-content: space-evenly;
+
+
+}
+.images article{
+
+    padding:1rem;
+    background-color: var(--gray);
+    border:2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    overflow: hidden;
+    width:400px;
+}
+
+
+.images article:hover{
+    transition:all 1s ease  ;
+    transform: translateY(-10px);
+    background-color: var(--gray-hover);
+    cursor :pointer;
+    transform:scale(1.1);
+}
+.images article > p{
+    flex:1 0 0;
+}
+.role{
+    color:var(--Light-Blue);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.attrbuite {
+    background-color: var(--secondarey);
+    display: inline-block;
+    width:fit-content;
+    padding:0.4rem 0.5rem;
+    border-radius: 1rem;
+    font-weight: 900;
+    margin-right:10px;
+
+}
+.images article h3{
+    font-weight: 800;
+    font-size: 2rem;
+}
+.images article img{
+    width:100%;
+
+
+}
+.images article div{
+    display: flex;
+
+    
+}
+.images article div p{
+    font-size: 12px;
+    font-weight:500;
+}
+
+.neil{
+    position: relative;
+    transform:scale(1.16);
+
+}
+
+.neil:hover{
+    transition:all 1s ease;
+    transform:scale(2);
+    
+}
+#Landing{
+    margin-top: 5rem;
+    background-color: #0e0e0e;
+    display: flex;
+    padding:2rem;
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem;
+    animation:slid-up 1.4s ease-in-out;
+    animation-timeline: view();
+    animation-range:entry;
+    overflow-x: hidden;
+
+
+}
+#Landing .lnd-img{
+    width:100%;
+    max-width:500px;
+    background-image: url(./Images/Moon2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:2px solid black;
+    padding:10rem;
+}
+.lnd-img p{
+    background-color: #08080896;
+    font-size: 1.6rem;
+    border-left: 5px solid var(--secondarey);
+    border-radius: 10px;
+    padding:0.2rem 1rem;
+    font-weight: 800;
+    position: relative;
+    left:14rem;
+    top:2rem;
+    
+}
+#Landing article{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+#Landing article h2{
+    font-size: 4rem;
+    width:90%;
+}
+#Landing article h2 span{
+    color:var(--Light-Blue);
+
+}
+#Landing article p{
+    display:flex;
+    align-items: center;
+    margin-top:20px;
+    gap:1.4rem;
+}
+#Landing article p img{
+    width:40px;
+}
+#Landing article h3{
+    font-size: 1.4rem;
+}
+#Impact{
+    background-color:#131313 ;
+    padding:10rem 2rem;
+    display: flex;
+    justify-content: center;
+    animation:slid-up 1.4s ease-in-out;
+    animation-timeline: view();
+    animation-range:entry;
+
+
+}
+
+.imct-cnt{
+    border:2px solid var(--border-color);
+}
+
+#Impact .imct-cnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1.34s ease alternate;
+    background:linear-gradient(to right ,#131313 50% ,var(--black) );
+    padding:6rem;
+    
+}
+
+#Impact .imct-cnt img{
+    order:2;
+    width:400px;
+    animation:flip 1s ease-in-out alternate;
+    animation-timeline: view();   
+
+}
+.imct-cnt article{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+.imct-cnt article h2{
+    font-size: 4rem;
+
+}
+.imct-cnt article p{
+    width:90%;
+    color:#e2e2ebcb;
+}
+
+.stats-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.stats-container h3{
+    color:var(--Light-Blue);
+    font-size: 1.5rem;
+}
+.stats-container p{
+    font-size: 1rem;
+}
+.stats-container div{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+
+}
+.imct-cnt a{
+    width:fit-content;
+    text-align: center;
+    color:var(--Light-Blue);
+    text-decoration: none;
+    border:2px solid var(--Light-Blue);
+    padding:1rem 2rem;
+     border-radius: 10px;
+     cursor:pointer;
+}
+.imct-cnt a:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: var(--secondarey);
+    color:white;
+    border-color: var(--secondarey);
+}
+#Timeline{
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1b1b;
+    gap:2rem;
+   padding:4rem 2rem;
+   padding-bottom: 10rem;
+    animation:slid-up 1.4s ease-in-out;
+    animation-timeline: view();
+    animation-range:entry;
+
+}
+#Timeline h2{
+    text-align: center;
+    font-size: 3.2rem;
+}
+#Timeline div{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem;
+}
+#Timeline article{
+
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
+    background-color: #080808;
+    gap:2rem;
+    border-radius: 1rem;
+    
+    
+}
+.box1{
+    border-top:5px solid #0b3c9142;
+}
+.box2{
+    border-top:5px solid #0b3c9159;
+}
+.box3{
+    border-top:5px solid #0b3c91af;
+}
+.box4{
+    border-top:5px solid #0B3D91;
+}
+
+
+
+footer{
+    background-color: #080808;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    padding:2rem;
+}
+footer h2{
+    font-size:3rem;
+}
+footer h2 +p{
+    color:#434652;
+}
+.ft-link{
+    text-decoration: none;
+}
+@media (max-width:1400px){
+    .images article{
+        width:300px;
+    }
+    .images{
+        gap:3rem;
+    }
+    .images article div p{
+        padding:5px;
+    }
+    .lnd-img p{
+        left:10rem;
+        top:3rem;
+    }
+
+}
