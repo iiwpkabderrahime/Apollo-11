@@ -5,7 +5,7 @@ A fully responsive, multi-section tribute website dedicated to the **Apollo 11 M
 ---
 
 ## 🌐 Live Preview
-
+🔗 **[fd-biography.vercel.app](https://apollo11.vercel.app/)**
 > Open `index.html` in any modern browser to view the project locally.
 
 ---
